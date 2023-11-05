@@ -1,22 +1,31 @@
+///Event Listener--------------------------------------------------------------
+const search = document.getElementById('search');
+search.addEventListener('click',getPokemon);
 
-// const search = document.getElementById('#search');
-// search.addEventListener('click',getPokemon);
+
+function capitalFirstLetter(string){
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+function lowerCaseName(string){
+    return string.toLowerCase();
+}
+function getPokemon(e) {
+    const name = document.querySelector('#pokemonName').value;
+    const pokemonName = lowerCaseName(name); 
 
 ///Getting a Connection for Server,API with fetch-------------------------------
-
-function getPokemon(e) {
-
-const name = document.querySelector('#pokemonName').value;
-
-fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
 .then((response)=>response.json())
 .then((data)=>{
     console.log(data);
-const pokemonBox = document.querySelector('.pokemonBox').innerHTML =`<div>
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png" alt=""></div>
+///Dom---------------------------------
+const pokemonBox = document.querySelector('.pokemonBox')
+
+pokemonBox.innerHTML =`<div>
+    <img src="${data.sprites.front_default}" alt="${data.name}"></div>
     <div class="pokemonInfo">
-        <h1>Ditto</h1>
-        <p>Flavor Text</p>
+        <h1>${capitalFirstLetter(data.name)}</h1>
+        <p>${data.stats[0].stat.name}</p>
     </div>`;
   
 })
