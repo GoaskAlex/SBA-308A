@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+
+  #header{
+    background-color: #f54642;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .link{
+        width: 16rem;
+        padding: 10px 2px;
+        background: #426cf5;
+        border:none;
+        color:white;
+        border-radius: 30px;
+        font-weight: bolder;
+        
+    }
+    .dropdown.active > .link,
+    .link:hover{
+        color: #000;
+    }
+
+    .dropdown{
+        position: relative;
+    }
+
+    .dropdown-menu{
+        position: absolute;
+        left: 0;
+        top: 100%;
+        top: calc(100% + .25rem);
+        background-color: #ece8e8;
+        padding: .75rem;
+        pointer-events: none;
+        box-shadow:0 2px 5px 0 rgba(0,0,0,0.1);
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    }
+
+    .dropdown.active > .link + .dropdown-menu{
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+  
+  body{
+    background-color: black;
+    font: 400 1rem "Roboto", sans-serif;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  main {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+  
+  .searchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .searchBox input {
+    border-radius: 8px 0 0 8px;
+    border: 0;
+    outline: none;
+    height: 36px;
+    padding: 4px 16px;
+    background-color: white;
+    color: #000;
+  }
+  
+  .searchBox button {
+    border-radius: 0 8px 8px 0;
+    border: 0;
+    height: 36px;
+    padding: 4px 16px;
+    background-color: white;
+  }
+  
+  .pokemonBox {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+  
+  .pokemonBox img {
+    width: 200px;
+  }
+  
+  .pokemonBox p {
+    margin-top: 1rem;
+  }
+  
+  .pokemonBox .pokemonInfos {
+    padding: 2rem;
+  }
+
+  body2{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+  }
+
+.container{
+    width: 50%;
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+.card{
+    transform-style: preserve-3d;
+    min-height: 80vh;
+    width: 35rem;
+    border-radius: 30px;
+    padding: 2rem 5rem;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2),0px 0px 50px rgba(0,0,0,0.2);
+
+}
+
+.trainer{
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.trainer img{
+    width:10rem;
+    z-index: 2;
+}
+
+.circle{
+    width: 15rem;
+    height: 15rem;
+    background: linear-gradient(to right, rgba(245,70,66,0.75),rgba(8,83,156,0.75));
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.info h1{
+    font-size: 3rem;
+}
+
+.info h3{
+    font-size: 1.3rem;
+    padding: 2rem 0rem;
+    color: #585858;
+}
+
+.teams{
+    display: flex;
+    justify-content: space-between;
+}
+
+.teams button{
+    padding: 0.5rem 2rem;
+    background:none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color:#585858;
+}
+button.active{
+    background: #585858;
+    color: white;
+}
+
+
+
+.random{
+    margin-top: 2rem;
+}
+
+.random button{
+    width: 100%;
+    padding: 1rem 0rem;
+    background: #f54642;
+    border:none;
+    color:white;
+    border-radius: 30px;
+    font-weight: bolder;
+}

@@ -1,73 +1,121 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #0d0e0f;
-  }
+*{
+  font-family: 'Paytone One', sans-serif;
+  padding: 0px;
   
-  body,
-  input,
-  textarea,
-  select,
-  button {
-    color: white;
-    font: 400 1rem "Roboto", sans-serif;
+}
+
+nav{
+  text-align: center;
+  font-size: larger;
+}
+
+
+body{
+  background-color: #f54642;
+}
+
+#gotchaScreen{
+background-color: #585858; 
+
+display: flex;
+flex-wrap: wrap;
+
+}
+
+.card:hover{
+  animation: bounce 0.5s linear;
+  cursor: pointer;
+}
+@keyframes bounce{
+  20%{
+    transform: translateY(-9px);
   }
+  40%{
+    transform: translateY(-0px);
+  }
+  80%{
+    transform: translateY(-2px);
+  }
+  100%{
+    transform: translateY(-0px);
+  }
+}
+.card{
+  list-style: none;
+  padding: 20px;
+  background-color: #969696;
+  border-radius: 20px;
+  margin: 7px;
+  color:#222;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+#pokedex{
+  padding-inline-start: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+
+}
+
+.card-title{
+text-transform: uppercase;
+font-size: 15px;
+text-align: center;
+margin-bottom: 10px;
+
+
+}
+
+.card-subtitle{
+font-weight: lighter;
+color: rgb(7, 7, 7);
+font-weight: lighter;
+text-align: center;
+margin-top: 2px;
+font-size:medium
+}
+
+.card-image{
   
-  button {
-    cursor: pointer;
-  }
-  
-  a {
-    color: inherit;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  main {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 2rem;
-  }
-  
-  .searchBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .searchBox input {
-    border-radius: 8px 0 0 8px;
-    border: 0;
-    outline: none;
-    height: 36px;
-    padding: 4px 16px;
-    background-color: white;
-    color: #000;
-  }
-  
-  .searchBox button {
-    border-radius: 0 8px 8px 0;
-    border: 0;
-    height: 36px;
-    padding: 4px 16px;
-    background-color: white;
-  }
-  
-  .pokemonBox {
-    display: flex;
-    margin-top: 2rem;
-    justify-content: center;
-  }
-  
-  .pokemonBox img {
-    width: 200px;
-  }
-  
-  .pokemonBox p {
-    margin-top: 1rem;
-  }
-  
-  .pokemonBox .pokemonInfos {
-    padding: 2rem;
-  }
+  width: 150px;
+}
+
+.popup{
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100vh;
+  width:100vw;
+  background: #f4f4f4;
+  opacity:0.95;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#closeBtn{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+button{
+  background-color: #f54642;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  transition: transform 100ms;
+}
+
+button:hover{
+  cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow:0px 1px 2px darkred ;
+}
